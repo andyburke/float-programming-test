@@ -12,6 +12,10 @@ module.exports = ( str ) => {
             --openCount;
             hasParentheses = true;
         }
+
+        if ( openCount < 0 ) {
+            return false;
+        }
     }
 
     return hasParentheses && openCount === 0;
