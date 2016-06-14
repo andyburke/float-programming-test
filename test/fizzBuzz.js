@@ -16,3 +16,32 @@ test( 'FIZZBUZZ: returns a proper array based on input length', t => {
     t.deepEqual( result, [ 1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz' ], 'result is correct' );
     t.end();
 } );
+
+test( 'FIZZBUZZ: returns a proper array when input === 20', t => {
+    const result = fpt.fizzBuzz( 20 );
+
+    t.ok( result, 'generated a result' );
+    t.deepEqual( result, [
+        1,
+        2,
+        'fizz',
+        4,
+        'buzz',
+        'fizz',
+        7,
+        8,
+        'fizz',
+        'buzz',
+        11,
+        'fizz',
+        13,
+        14,
+        'fizzbuzz',
+        16,
+        17,
+        'fizz',
+        19,
+        'buzz'
+    ], 'result is correct' );
+    t.end();
+} );
